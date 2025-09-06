@@ -1,0 +1,30 @@
+name: Introducción a CI/CD -> Entregable 1.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  imprimir_info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Mensaje personalizado.
+        run: |
+          echo "Hola, soy Laura Danniela Zárate Guerrero y este es mi primer workflow."
+          echo "La fecha y hora actual es: $(date)"
+
+      - name: Configuración de python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11'
+
+      - name: Ejecutar script Python
+        run: python mi_script.py

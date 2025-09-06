@@ -1,4 +1,4 @@
-name: Introducción a CI/CD -> Entregable 1.
+name: Introducción a CI/CD - Entregable 1
 
 on:
   push:
@@ -16,12 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Mensaje personalizado.
+      - name: Imprimir Mensaje Personalizado
         run: |
           echo "Hola, soy Laura Danniela Zárate Guerrero y este es mi primer workflow."
           echo "La fecha y hora actual es: $(date)"
 
-      - name: Configuración de python
+      - name: Configurar Python
         uses: actions/setup-python@v3
         with:
           python-version: '3.11'

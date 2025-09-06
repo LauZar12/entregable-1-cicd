@@ -1,4 +1,4 @@
-
+# Script para mostrar información del sistema operativo y la fecha actual
 import platform
 import datetime
 
